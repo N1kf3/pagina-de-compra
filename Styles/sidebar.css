@@ -1,0 +1,9 @@
+.Sidebar{
+    background-color: yellow;
+    position: fixed;
+    right: 0;
+    top: 130px;
+    margin: 0;
+    width: 8%;
+    bottom: 0;
+}

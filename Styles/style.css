@@ -1,0 +1,35 @@
+a{
+    text-decoration: none;
+}
+
+.Infbar{
+    background-color: rgb(19,65,105);
+    height: 50px;
+    margin-left: -8px;
+    position: static;
+    margin-bottom: -10px;
+}
+
+.Sect-bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+
+.Bott{
+    margin-right: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.Bott:hover{
+    cursor: pointer;
+    border: 1px solid;
+    padding: 9px;
+}

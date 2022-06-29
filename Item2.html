@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shoping.Ve</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/grid-item.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
+        <link rel="stylesheet" href="styles/tabs.css">
+        <script src="Scripts/script.js"></script>
+    </head>
+
+
+    <body style=" background-color:rgb(196,196,196);" >
+        <div> <!-- pagina principal de la web-->
+            <div class="Upbar">
+                <div class="Inf-Upbar"> <!-- barra superior con busqueda e inicio de sesion etc--> <!--  informacion sup del upbar-->
+                    <div >   <!--titulo pagina-->                
+                        <a href="index.html">
+                            <h1 class="titulo">Shopping<span style="color:black">.VE</span></h1>
+                        </a>
+                    </div>  
+
+                    <div class="cent-sec"> <!-- busqueda-->
+                        <input type="text" placeholder="Buscar" class="search-bar">
+                        <button class="search-but">
+                            <img  class="search-icon" src="Img/search.svg">
+                            <div class="tooltip">Buscar</div>
+                        </button>
+                    </div>  
+
+                    <div class="user-inf" style="color:white ;"> <!-- inconos usuario-->
+                       <div class="user-log">
+                        <button onclick=openForm()>Iniciar sesion / Registrar  </button>                     
+                       </div>
+                       <div class="Perf-ico">
+                        <ion-icon name="person-outline"></ion-icon>
+                        </div>
+                    </div>          
+                </div>
+
+                <div class="Categ"> <!-- botones de categorias-->
+                    <button class="Bot-Cate" id="But-Cat" onclick="ClickCate()"> Categorias</button> 
+                    <div class="otro" id="boton">
+                        <button class="Bot-Categ" id="But-id"> Miscelanios</button> 
+                        <button class="Bot-Categ" id="But-id"> CPU</button> 
+                        <button class="Bot-Categ" id="But-id"> GPU</button>             
+                        <button class="Bot-Categ" id="But-id"> Teclados</button> 
+                        <button class="Bot-Categ" id="But-id"> Audifonos</button> 
+                        <button class="Bot-Categ" id="But-id"> Mouses</button> 
+                        <button class="Bot-Categ" id="But-id"> Case</button> 
+                        <button class="Bot-Categ" id="But-id"> Tarjeta Madre</button> 
+                    </div>
+                     
+                  
+                </div>
+
+            </div>
+
+            <div class="login-box" id="login-box">
+                <div class="flex-end">
+                <button class="Close-box" onclick=CloseForm()>X</button>
+                </div>
+                <h2>Iniciar Sesion</h2>
+                <form>
+                    <div class="user-box">
+                        <label>Usuario</label>
+                        <input type="text" name="" required="">
+                    </div>
+                    <div class="user-box">
+                        <label>Contraseña</label>
+                        <input type="password" name="" required="">  
+                    </div>
+                    <div class="user-bot">
+                    <a href="#">                        
+                        <br>
+                        ACEPTAR
+                    </a>
+                    <a href="#" class="new-acc" onclick=CreateForm()>
+                        <br>
+                        Crear Usuario
+                    </a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="create-box" id="create-box">
+                <div class="flex-end">
+                <button class="Close-box" onclick=CloseForm()>X</button>
+                </div>
+                <h2>Crear Cuenta</h2>
+                <form>
+                    <div class="user-box">
+                        <label>Usuario</label>                        
+                        <input type="text" name="" required="">
+                    </div>
+                    <div class="user-box">
+                        <label>Contraseña</label>
+                        <input type="password" name="" required="">                        
+                    </div>
+                    <div class="user-bot">
+                    <a href="#">                        
+                        <br>
+                        Crear
+                    </a>                
+                    </div>
+                </form>
+            </div>
+        
+
+            <div class="MainP"> <!--cuerpo de la pagina de busqueda --> 
+                <div class="Grids"> <!-- pagina de grid-->
+                    <div  class="Sub-Grid"> <!-- informacion de los items/nombres/precio/calificacion/ --> 
+                        <h1>
+                            TECWARE Phantom Mechanical Keyboard  | <span class="Precio"> $39.99</span>
+                        </h1>                   
+                        <div class="Grid-Pic"> 
+                            <img class="Img-item" src="Img/keyboard1.jpg" id="img0">
+                            <img class="Img-item2" src="Img/keyboard1-1.jpg" id="img1">
+                            <img class="Img-item2" src="Img/keyboard1-2.jpg" id="img2">
+                            <img class="Img-item2" src="Img/keyboard1-3.jpg" id="img3">
+                            <img class="Img-item2" src="Img/keyboard1-4.jpg" id="img4">
+                            <img class="Img-item2" src="Img/keyboard1-5.jpg" id="img5">                                                
+                            <img class="Img-item2" src="Img/keyboard1-6.jpg" id="img6">                                                
+                        </div>
+
+
+
+                    </div> <!-- termina el recuadro de info-->
+
+                    <div class="nav">                            
+                        <div class="circle" onclick="changeImg(0)" id="but0"></div>
+                        <div class="circle" onclick="changeImg(1)" id="but1"></div>
+                        <div class="circle" onclick="changeImg(2)" id="but2"></div>
+                        <div class="circle" onclick="changeImg(3)" id="but3"></div>
+                        <div class="circle" onclick="changeImg(4)" id="but4"></div>
+                        <div class="circle" onclick="changeImg(5)" id="but5"></div>
+                        <div class="circle" onclick="changeImg(6)" id="but6"></div>                        
+                    </div>
+
+
+                    <!-- tabs con info -->
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'Descripcion')">Descripcion</button>
+                        <button class="tablinks" onclick="openCity(event, 'Ficha')">Ficha tecnica</button>
+                        <button class="tablinks" onclick="openCity(event, 'Soporte')">Soporte</button>
+                        <button class="tablinks" onclick="openCity(event, 'Opiniones')">Opiniones</button>
+                        </div>
+                        
+                        <!-- Tab content -->
+                        <div id="Descripcion" class="tabcontent">
+                        <h3>Descripcion</h3>
+                        <p>London is the capital city of England.</p>
+                        </div>
+                        
+                        <div id="Ficha" class="tabcontent">
+                        <h3>Ficha tecnica</h3>
+                        <p>Paris is the capital of France.</p>
+                        </div>
+                        
+                        <div id="Soporte" class="tabcontent">
+                        <h3>Soporte</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                        </div>
+
+                        <div id="Opiniones" class="tabcontent">
+                        <h3>Opiniones</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                        </div>
+                                    
+                </div>                 
+                         
+            </div>
+
+
+
+
+
+
+            <div class="Sidebar"> <!-- side bar de seleccion de filtro-->
+                sidebar
+            </div>
+            <div class="Infbar">  <!--barra inferior con informacion de la pagina/seleccion de idioma/FAQ/about/noticias-->
+                INFO y extras
+            </div>
+        </div>
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+
+</html>
